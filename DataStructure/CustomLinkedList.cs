@@ -28,6 +28,13 @@ namespace DataStructure
             }
         }        
 
+        public void AddFirst(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
+        }
+
         public void Display()
         {
             Console.WriteLine("Displaying nodes");
