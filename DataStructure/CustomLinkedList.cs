@@ -34,7 +34,10 @@ namespace DataStructure
             newNode.next = head;
             head = newNode;
         }
-
+        public void Append(int data)
+        {
+            AddLast(data);
+        }
         public void Display()
         {
             Console.WriteLine("Displaying nodes");
