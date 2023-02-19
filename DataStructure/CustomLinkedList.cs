@@ -27,7 +27,6 @@ namespace DataStructure
                 temp.next = newNode;
             }
         }        
-
         public void AddFirst(int data)
         {
             Node newNode = new Node(data);
@@ -55,6 +54,30 @@ namespace DataStructure
             {
                 Console.WriteLine("Removed: " + head.data);
                 head = head.next;
+            }
+        }
+        public void RemoveLast()
+        {
+            Node temp = head;
+            if (head == null)
+            {
+                Console.WriteLine("LinkedList is empty, please add node");
+            }
+            else if(head.next == null)
+            {
+                int data = temp.data;
+                temp = null;
+                Console.WriteLine("{0} node is deleted", data);
+            }
+            else
+            {
+                while(temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                int lastDeletedNode = temp.next.data;
+                temp.next = null;
+                Console.WriteLine("{0} node is deleted", lastDeletedNode    );
             }
         }
         public void Display()

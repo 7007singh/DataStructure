@@ -10,7 +10,8 @@ namespace DataStructure
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose program to execute \n1:LinkList Add Last\n2:LinkList Add First\n3:LinkList Append\n4:Insertion LinkList\n5:Deletion of First node");
+            Console.WriteLine("Choose program to execute \n1:LinkList Add Last\n2:LinkList Add First\n3:LinkList Append" +
+                "\n4:Insertion LinkList\n5:Deletion of First node\n6:Deletion of last node");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -49,6 +50,14 @@ namespace DataStructure
                     linkedListRemoveFirst.Append(70);
                     linkedListRemoveFirst.RemoveFirst();
                     linkedListRemoveFirst.Display();
+                    break;
+                case 6:
+                    CustomLinkedList linkedListRemoveLast = new CustomLinkedList();
+                    linkedListRemoveLast.Append(56);
+                    linkedListRemoveLast.Append(30);
+                    linkedListRemoveLast.Append(70);
+                    linkedListRemoveLast.RemoveLast();
+                    linkedListRemoveLast.Display();
                     break;
             }            
             Console.ReadLine();
