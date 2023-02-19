@@ -14,6 +14,5 @@ namespace DataStructure
         {
             this.data = data;
         }
-
     }
 }

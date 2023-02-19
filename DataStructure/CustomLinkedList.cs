@@ -38,6 +38,13 @@ namespace DataStructure
         {
             AddLast(data);
         }
+        public void Insert(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.data = data;
+            newNode.next = head.next;
+            head.next = newNode;
+        }
         public void Display()
         {
             Console.WriteLine("Displaying nodes");

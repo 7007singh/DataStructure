@@ -10,7 +10,7 @@ namespace DataStructure
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose program to execute \n1:LinkList Add Last\n2:LinkList Add First\n3:LinkList Append");
+            Console.WriteLine("Choose program to execute \n1:LinkList Add Last\n2:LinkList Add First\n3:LinkList Append\n4:Insertion LinkList");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -34,6 +34,13 @@ namespace DataStructure
                     linkedListAppend.Append(30);
                     linkedListAppend.Append(70);
                     linkedListAppend.Display();
+                    break;
+                case 4:
+                    CustomLinkedList linkedListInsert = new CustomLinkedList();
+                    linkedListInsert.Append(56);
+                    linkedListInsert.Append(70);
+                    linkedListInsert.Insert(30);
+                    linkedListInsert.Display();
                     break;
             }            
             Console.ReadLine();
