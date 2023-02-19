@@ -80,6 +80,26 @@ namespace DataStructure
                 Console.WriteLine("{0} node is deleted", lastDeletedNode    );
             }
         }
+        public void Search(int data)
+        {
+            Node temp = head;
+            if(temp == null)
+            {
+                Console.WriteLine("Linked list is empty");
+            }
+            else
+            {
+                while(temp != null)
+                {
+                    if(temp.data == data)
+                    {
+                        Console.WriteLine("Node is present " + data);
+                        break;
+                    }
+                    temp = temp.next;
+                }
+            }
+        }
         public void Display()
         {
             Console.WriteLine("Displaying nodes");
