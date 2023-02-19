@@ -45,6 +45,18 @@ namespace DataStructure
             newNode.next = head.next;
             head.next = newNode;
         }
+        public void RemoveFirst()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("LinkedList is empty, Please add node");
+            }
+            else
+            {
+                Console.WriteLine("Removed: " + head.data);
+                head = head.next;
+            }
+        }
         public void Display()
         {
             Console.WriteLine("Displaying nodes");
